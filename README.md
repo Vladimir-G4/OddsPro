@@ -2,6 +2,8 @@
 
 ![MLB Logo](https://www.mlbstatic.com/team-logos/league-on-dark/1.svg)
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/MLB_LOGO.svg" alt="MLB Logo" width="200" height="100">
+
 ## Overview
 
 This Python script retrieves today's MLB (Major League Baseball) betting odds for Over/Under bets using The Odds API and provides betting recommendations based on the combined average runs scored by each team over their last 5 games. It's a handy tool for those interested in making informed betting decisions on MLB games.
