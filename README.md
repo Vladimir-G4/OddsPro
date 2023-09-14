@@ -34,10 +34,10 @@ Before you can use this script, you'll need to ensure the following prerequisite
 3. Run the script using Python:
 
    ```bash
-   python mlb_betting_odds.py
+   python main.py
 
 ## Example Output
-
+```bash
 Cincinnati Reds @ Detroit Tigers
 AVG RUNS: 7.6
 
