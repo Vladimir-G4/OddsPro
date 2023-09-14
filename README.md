@@ -38,7 +38,6 @@ Before you can use this script, you'll need to ensure the following prerequisite
 
 ## Example Output
 
-    ```bash
     Washington Nationals @ Pittsburgh Pirates
     COMBINED AVG RUNS OVER LAST 5 GAMES: 9.40
     Recommended Bet: Unibet | totals | Washington Nationals @ Pittsburgh Pirates | Over | 8.5 | -105
