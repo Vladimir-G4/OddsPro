@@ -1,4 +1,4 @@
-# MLB Over Under Script
+# MLB Over Under Bot
 
 ![MLB Logo](https://www.mlbstatic.com/team-logos/league-on-dark/1.svg)
 
