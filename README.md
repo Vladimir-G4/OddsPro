@@ -4,11 +4,11 @@
 
 ## Overview
 
-This Python script retrieves today's MLB (Major League Baseball) betting odds for Over/Under bets using The Odds API and provides betting recommendations based on the combined average runs scored by each team over their last 5 games. It's a handy tool for those interested in making informed betting decisions on MLB games.
+This Python script retrieves today's MLB (Major League Baseball) betting odds for Over/Under bets using The Odds API and provides betting recommendations based on the combined average runs scored by each team over their last 5 games.
 
 ## Special Thanks
 
-We'd like to extend our special thanks to the following services for making this script possible:
+Special thanks to the following services for making this script possible:
 
 - [The Odds API](https://the-odds-api.com): The primary data source for retrieving MLB betting odds.
 - [Fox Sports MLB](https://www.foxsports.com/mlb/): The source of data for obtaining team statistics.
