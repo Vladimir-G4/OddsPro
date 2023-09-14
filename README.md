@@ -51,6 +51,6 @@ Before you can use this script, you'll need to ensure the following prerequisite
     Recommended Bet: PointsBet (US) | totals | New York Yankees @ Boston Red Sox | Under | 9.5 | -120
 
 ## TO DOS 
-- [] Add a warning if a game is currently live (The script for example might recommend betting over 4.5 runs if the total average runs scored is over 4.5, even if the game is 2-1 in the bottom of the 9th)
-- [] Add a GUI
+- [ ] Add a warning if a game is currently live (The script for example might recommend betting over 4.5 runs if the total average runs scored is over 4.5, even if the game is 2-1 in the bottom of the 9th)
+- [ ] Add a GUI
     
