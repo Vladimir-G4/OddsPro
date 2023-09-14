@@ -255,15 +255,9 @@ def getRecommendedBets():
         HOME_TEAM = TEAMS[1]
         HOME_TEAM_LOGO_URL = getTeamLogoURL(HOME_TEAM)
         TOTAL_AVG = float(getTotalAvg(HOME_TEAM, AWAY_TEAM))
-        FARTHEST_POINT = None
-        BEST_ODDS = None
-        BEST_BET = None
-        FARTHEST_POINT_OVER = None
-        BEST_ODDS_OVER = None
-        BEST_BET_OVER = None
-        FARTHEST_POINT_UNDER = None
-        BEST_ODDS_UNDER = None
-        BEST_BET_UNDER = None
+        FARTHEST_POINT, BEST_ODDS, BEST_BET = None
+        FARTHEST_POINT_OVER, BEST_ODDS_OVER, BEST_BET_OVER = None
+        FARTHEST_POINT_UNDER, BEST_ODDS_UNDER, BEST_BET_UNDER = None
 
         print(f"{GAME}\nCOMBINED AVG RUNS OVER LAST 5 GAMES: {TOTAL_AVG:.2f}")
 
