@@ -1,4 +1,4 @@
-# MLB Betting Odds Script
+# MLB Over Under Script
 
 ![MLB Logo](https://www.mlbstatic.com/team-logos/league-on-dark/1.svg)
 
