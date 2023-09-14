@@ -1,6 +1,6 @@
 # MLB Betting Odds Script
 
-![MLB Logo]([https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MLB_LOGO.svg/320px-MLB_LOGO.svg.png](https://www.mlbstatic.com/team-logos/league-on-dark/1.svg))
+![MLB Logo](https://www.mlbstatic.com/team-logos/league-on-dark/1.svg)
 
 ## Overview
 
