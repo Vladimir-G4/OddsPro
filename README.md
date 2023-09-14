@@ -37,10 +37,14 @@ Before you can use this script, you'll need to ensure the following prerequisite
    python main.py
 
 ## Example Output
-```bash
-Cincinnati Reds @ Detroit Tigers
-AVG RUNS: 7.6
+Washington Nationals @ Pittsburgh Pirates
+COMBINED AVG RUNS OVER LAST 5 GAMES: 9.40
+Recommended Bet: Unibet | totals | Washington Nationals @ Pittsburgh Pirates | Over | 8.5 | -105
 
-Recommended Bets:
-- DraftKings | totals | Cincinnati Reds @ Detroit Tigers | Over 9.0 | Odds: +100
-- BetMGM | totals | Cincinnati Reds @ Detroit Tigers | Under 9.0 | Odds: -115
+Cincinnati Reds @ Detroit Tigers
+COMBINED AVG RUNS OVER LAST 5 GAMES: 7.60
+Recommended Bet: BetMGM | totals | Cincinnati Reds @ Detroit Tigers | Under | 9.0 | -115
+
+New York Yankees @ Boston Red Sox
+COMBINED AVG RUNS OVER LAST 5 GAMES: 7.80
+Recommended Bet: PointsBet (US) | totals | New York Yankees @ Boston Red Sox | Under | 9.5 | -120
