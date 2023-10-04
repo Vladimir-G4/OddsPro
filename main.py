@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 API_KEY = "YOUR_API_KEY_HERE"
 
-def getBets(API_KEY):
+def getBets(API_KEY: str) -> dict:
 
     """
     Retrieve MLB betting odds (Over/Under) using The Odds API.
@@ -96,7 +96,7 @@ def getBets(API_KEY):
 
 
 
-def getLastFiveAvgRunsScored(TEAM):
+def getLastFiveAvgRunsScored(TEAM: str) -> str:
 
     """
     Get the average runs scored by a specified MLB team in their last 5 games.
@@ -134,7 +134,7 @@ def getLastFiveAvgRunsScored(TEAM):
 
 
 
-def getTeamLogoURL(TEAM):
+def getTeamLogoURL(TEAM: str) ->  str:
 
     """
     Get the URL of the logo for a specified MLB team from the Fox Sports website.
@@ -168,7 +168,7 @@ def getTeamLogoURL(TEAM):
 
 
 
-def getLastFiveGameScores(TEAM):
+def getLastFiveGameScores(TEAM: str) -> str:
 
     """
     Get the scores of the last 5 games played by a specified MLB team.
@@ -214,7 +214,7 @@ def getLastFiveGameScores(TEAM):
 
 
 
-def getTotalAvg(HOME_TEAM, AWAY_TEAM):
+def getTotalAvg(HOME_TEAM: str, AWAY_TEAM: str) -> float:
 
     """
     Calculate the total average runs scored for both specified MLB teams.
