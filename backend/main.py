@@ -12,9 +12,9 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
-API_KEY = "YOUR_API_KEY_HERE"
+API_KEY = "YOUR_API_KEY"
 
-def getBets(API_KEY: str) -> dict:
+def getMLBBets(API_KEY: str) -> dict:
 
     """
     Retrieve MLB betting odds (Over/Under) using The Odds API.
@@ -94,9 +94,7 @@ def getBets(API_KEY: str) -> dict:
     else:
         print(f"Error: {RESPONSE.status_code}")
 
-
-
-def getLastFiveAvgRunsScored(TEAM: str) -> str:
+def getMLBLastFiveAvgRunsScored(TEAM: str) -> str:
 
     """
     Get the average runs scored by a specified MLB team in their last 5 games.
@@ -132,9 +130,7 @@ def getLastFiveAvgRunsScored(TEAM: str) -> str:
 
     return str(AVG_RUNS)
 
-
-
-def getTeamLogoURL(TEAM: str) ->  str:
+def getMLBTeamLogoURL(TEAM: str) ->  str:
 
     """
     Get the URL of the logo for a specified MLB team from the Fox Sports website.
@@ -166,9 +162,7 @@ def getTeamLogoURL(TEAM: str) ->  str:
     except AttributeError:
         return SCRAPE_TEAM
 
-
-
-def getLastFiveGameScores(TEAM: str) -> str:
+def getMLBLastFiveGameScores(TEAM: str) -> str:
 
     """
     Get the scores of the last 5 games played by a specified MLB team.
@@ -212,9 +206,7 @@ def getLastFiveGameScores(TEAM: str) -> str:
 
     return "\n" + GAME_DATA + "\n"
 
-
-
-def getTotalAvg(HOME_TEAM: str, AWAY_TEAM: str) -> float:
+def getMLBTotalAvg(HOME_TEAM: str, AWAY_TEAM: str) -> float:
 
     """
     Calculate the total average runs scored for both specified MLB teams.
@@ -227,14 +219,13 @@ def getTotalAvg(HOME_TEAM: str, AWAY_TEAM: str) -> float:
         float: The total average runs scored by both teams.
     """
 
-    HOME_AVG = float(getLastFiveAvgRunsScored(HOME_TEAM))
-    AWAY_AVG = float(getLastFiveAvgRunsScored(AWAY_TEAM))
+    HOME_AVG = float(getMLBLastFiveAvgRunsScored(HOME_TEAM))
+    AWAY_AVG = float(getMLBLastFiveAvgRunsScored(AWAY_TEAM))
     TOTAL_AVG = HOME_AVG + AWAY_AVG
 
     return TOTAL_AVG
 
-def getRecommendedBets():
-
+def getRecommendedMLBBets(API_KEY: str) -> list:
     """
     Retrieve and recommend MLB betting lines based on average runs scored over each team's last 5 games.
 
@@ -243,49 +234,65 @@ def getRecommendedBets():
     betting line (Over or Under) that is farthest from the calculated total average runs scored, considering both
     the point and odds.
 
+    Args:
+        API_KEY (str): Your API key for The Odds API.
+
     Returns:
-        None: This function prints the recommended betting lines for each game.
+        list: A list of dictionaries representing recommended betting lines for each game.
     """
+    try:
+        recommendations = []
 
-    for GAME, BETS in getBets(API_KEY).items():
-    
-        TEAMS = GAME.split(" @ ")
-        AWAY_TEAM = TEAMS[0]
-        AWAY_TEAM_LOGO_URL = getTeamLogoURL(AWAY_TEAM)
-        HOME_TEAM = TEAMS[1]
-        HOME_TEAM_LOGO_URL = getTeamLogoURL(HOME_TEAM)
-        TOTAL_AVG = float(getTotalAvg(HOME_TEAM, AWAY_TEAM))
-        FARTHEST_POINT, BEST_ODDS, BEST_BET = None
-        FARTHEST_POINT_OVER, BEST_ODDS_OVER, BEST_BET_OVER = None
-        FARTHEST_POINT_UNDER, BEST_ODDS_UNDER, BEST_BET_UNDER = None
+        for GAME, BETS in getMLBBets(API_KEY).items():
+            TEAMS = GAME.split(" @ ")
+            AWAY_TEAM = TEAMS[0]
+            AWAY_TEAM_LOGO_URL = getMLBTeamLogoURL(AWAY_TEAM)
+            HOME_TEAM = TEAMS[1]
+            HOME_TEAM_LOGO_URL = getMLBTeamLogoURL(HOME_TEAM)
+            TOTAL_AVG = float(getMLBTotalAvg(HOME_TEAM, AWAY_TEAM))
+            FARTHEST_POINT, BEST_ODDS, BEST_BET = None
+            FARTHEST_POINT_OVER, BEST_ODDS_OVER, BEST_BET_OVER = None
+            FARTHEST_POINT_UNDER, BEST_ODDS_UNDER, BEST_BET_UNDER = None
 
-        print(f"{GAME}\nCOMBINED AVG RUNS OVER LAST 5 GAMES: {TOTAL_AVG:.2f}")
+            recommendations.append({
+                "game": GAME,
+                "combined_avg_runs": round(TOTAL_AVG, 2),
+                "recommended_bet": None
+            })
 
-        for BET in BETS:
-            BET_INFO = BET.split(" | ")
-            OVER_UNDER = BET_INFO[3]
-            POINT = float(BET_INFO[4])
-            ODDS = int(BET_INFO[5])
-            if( OVER_UNDER == 'Over' and (FARTHEST_POINT_OVER is None or (abs(TOTAL_AVG - POINT)) >= abs(TOTAL_AVG - FARTHEST_POINT_OVER))) and (BEST_ODDS_OVER is None or max(ODDS, BEST_ODDS_OVER) == ODDS):
-                FARTHEST_POINT_OVER = POINT
-                BEST_BET_OVER = BET
-                BEST_ODDS_OVER = ODDS
-            elif( OVER_UNDER == 'Under' and (FARTHEST_POINT_UNDER is None or (abs(TOTAL_AVG - POINT)) >= abs(TOTAL_AVG - FARTHEST_POINT_UNDER))) and (BEST_ODDS_UNDER is None or max(ODDS, BEST_ODDS_UNDER) == ODDS):
-                FARTHEST_POINT_UNDER = POINT
-                BEST_BET_UNDER = BET
-                BEST_ODDS_UNDER = ODDS
-        
-        FARTHEST_POINT = max(FARTHEST_POINT_OVER, FARTHEST_POINT_UNDER)
-        if(FARTHEST_POINT < TOTAL_AVG):
-            BEST_BET = BEST_BET_OVER
-            BEST_ODDS = BEST_ODDS_OVER
-        elif(FARTHEST_POINT > TOTAL_AVG):
-            BEST_BET = BEST_BET_UNDER
-            BEST_ODDS = BEST_ODDS_UNDER
+            for BET in BETS:
+                BET_INFO = BET.split(" | ")
+                OVER_UNDER = BET_INFO[3]
+                POINT = float(BET_INFO[4])
+                ODDS = int(BET_INFO[5])
 
-        print(f"Recommended Bet: {BEST_BET}\n")
+                if (OVER_UNDER == 'Over' and (FARTHEST_POINT_OVER is None or (abs(TOTAL_AVG - POINT)) >= abs(TOTAL_AVG - FARTHEST_POINT_OVER))) and (BEST_ODDS_OVER is None or max(ODDS, BEST_ODDS_OVER) == ODDS):
+                    FARTHEST_POINT_OVER = POINT
+                    BEST_BET_OVER = BET
+                    BEST_ODDS_OVER = ODDS
+                elif (OVER_UNDER == 'Under' and (FARTHEST_POINT_UNDER is None or (abs(TOTAL_AVG - POINT)) >= abs(TOTAL_AVG - FARTHEST_POINT_UNDER))) and (BEST_ODDS_UNDER is None or max(ODDS, BEST_ODDS_UNDER) == ODDS):
+                    FARTHEST_POINT_UNDER = POINT
+                    BEST_BET_UNDER = BET
+                    BEST_ODDS_UNDER = ODDS
+
+            FARTHEST_POINT = max(FARTHEST_POINT_OVER, FARTHEST_POINT_UNDER)
+
+            if FARTHEST_POINT < TOTAL_AVG:
+                BEST_BET = BEST_BET_OVER
+                BEST_ODDS = BEST_ODDS_OVER
+            elif FARTHEST_POINT > TOTAL_AVG:
+                BEST_BET = BEST_BET_UNDER
+                BEST_ODDS = BEST_ODDS_UNDER
+
+            recommendations[-1]["recommended_bet"] = f"Recommended Bet: {BEST_BET}"
+
+        return recommendations
+
+    except Exception:
+        return [{"error": "No Bets Found. MLB season may be over or no games are scheduled for today."}]
+
 
 # ACCESSIBLE VARIABLES
 # BEST_BET | HOME_TEAM | AWAY_TEAM | TOTAL_AVG:.2f | HOME_TEAM_LOGO_URL | AWAY_TEAM_LOGO_URL
 
-getRecommendedBets()
+print(getRecommendedMLBBets())

@@ -1,0 +1,191 @@
+/* App.css */
+
+body, h1, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.OddsPro-header{
+  margin-top: 5vh; /* Adjusted margin */
+}
+
+/* OddsPro-style button */
+.OddsPro-button {
+  position: relative;
+  display: inline-block;
+  padding: 1.1em 6em; /* Adjusted padding for a wider button */
+  margin: 1em;
+  font-size: 1.1em;
+  font-family: "San Francisco Bold";
+  font-weight: bold; /* Bold button text */
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  border-radius: 1em;
+  border: none;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  overflow: hidden; /* Hide overflowing image */
+}
+
+.OddsPro-button span {
+  z-index: 1;
+}
+
+.OddsPro-button .Button-image {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.OddsPro-button:hover {
+  background: #f0f0f0; /* Slightly darker color on hover for the 3D effect */
+  transform: translateY(-0.2em); /* Adjusted translateY for a subtle raised effect */
+  box-shadow: 0 0.4em 0.6em rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.OddsPro-button:hover .Button-image {
+  opacity: 1;
+}
+
+.OddsPro-button:active {
+  transform: translateY(0.1em); /* Adjusted translateY for a click animation */
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
+}
+
+/* Button container styles */
+.Button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 7vh;
+}
+
+/* Button image styles */
+.Button-image {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+/* Additional styling for links if needed */
+a {
+  color: #0070c9;
+  text-decoration: none;
+}
+
+/* About Section */
+.About {
+  max-width: 60%; /* Adjusted to be more responsive */
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background for a clean look */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Slightly increased shadow for depth */
+}
+
+/* About Title */
+.About-title {
+  font-size: 2.5em;
+  font-family: "San Francisco";
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* About Description */
+.About-description {
+  font-size: 1.3em;
+  font-family: "San Francisco";
+  color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Why Choose Section */
+.About-why-choose {
+  margin-bottom: 30px;
+}
+
+/* Why Choose Title */
+.About-why-choose h3 {
+  font-size: 1.8em;
+  font-family: "San Francisco";
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Why Choose List */
+.About-why-choose ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 8vw;
+}
+
+/* Why Choose List Items */
+.About-why-choose li {
+  font-size: 1.3em;
+  font-family: "San Francisco";
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Get Started Section */
+.About-get-started {
+  font-size: 1.3em;
+  font-family: "San Francisco";
+  color: #333;
+  text-align: center;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .OddsPro-button {
+    padding: 1.5em 2em; /* Increase padding for a larger button on smaller screens */
+    font-size: 1.2em; /* Increase font size for a larger button on smaller screens */
+    margin: 0.5em 0; /* Adjust margin for vertically stacked buttons */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    text-align: center; /* Center text in case it spans multiple lines */
+    width: 20vh;
+    height: 3vh;
+  }
+
+  h1 {
+    font-size: 2.5em; /* Adjusted header font size for smaller screens */
+  }
+
+  p {
+    font-size: 1.2em; /* Adjusted subtitle font size for smaller screens */
+  }
+
+  .OddsPro-logo {
+    height: 8em; /* Increase the size of the logo for smaller screens */
+    animation: spin 20s linear infinite;
+  }
+
+  /* Adjusted margin for smaller screens */
+  .Button-container {
+    display: flex;
+    flex-direction: column; /* Ensure buttons are vertically stacked */
+    align-items: center; /* Center buttons horizontally */
+    margin-top: 7vh;
+  }
+
+  .OddsPro-header{
+    margin-top: 10vh; /* Adjusted margin */
+  }
+}

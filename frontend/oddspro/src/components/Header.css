@@ -1,0 +1,67 @@
+/* Header Styles */
+
+.OddsPro-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.OddsPro-logo {
+  height: 7em;
+  animation: spin 30s linear infinite;
+}
+
+/* Title Styles */
+h1 {
+  font-size: 3em;
+  margin-top: 1em;
+  font-family: "San Francisco Bold";
+}
+
+/* Subtitle Styles */
+p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-family: "San Francisco";
+}
+
+/* Link Styles */
+.Link {
+  text-decoration: none;
+}
+
+.Link:hover {
+  text-decoration: none;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Adjust Styles for Screens Smaller than 600px */
+@media (max-width: 600px) {
+  .OddsPro-logo {
+    height: 5em;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-top: 0.2em;
+  }
+
+  p {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+}

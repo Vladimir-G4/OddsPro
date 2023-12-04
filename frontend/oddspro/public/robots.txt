@@ -1,0 +1,7 @@
+# Disallow crawling of specific directories
+User-agent: *
+Disallow: /private/
+Disallow: /restricted/
+
+# Allow crawling of the rest of the site
+Allow: /

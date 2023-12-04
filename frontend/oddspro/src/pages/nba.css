@@ -1,0 +1,161 @@
+/* NBA Styles */
+
+.nba-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-logo {
+  width: 5vw;
+  aspect-ratio: 1 / 1;
+  margin: 0.5vw;
+  border-radius: 0.5vw;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 0.5vw;
+  box-shadow: 0 0.25vw 0.5vw rgba(0, 0, 0, 0.1);
+  padding: 1vw;
+  max-width: 85vw; /* Adjusted max-width for better fit */
+  margin-top: 1vw;
+}
+
+/* Adjusted width to fit three cards in a row */
+.nba-game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc((80vw - 4vw) / 3); /* Calculate width for three cards with 1vw margin between them */
+  margin: 0.5vw;
+  padding: 1vw;
+  border-radius: 0.5vw;
+  box-shadow: 0 0.25vw 0.5vw rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nba-game-card:hover {
+  transform: translateY(-0.25vw);
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
+}
+
+.teams {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin-top: 0.5vw;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8vw;
+}
+
+.team-info p {
+  font-family: "San Francisco";
+  font-weight: bold;
+  font-size: 0.9vw;
+}
+
+.vs {
+  font-size: 1vw;
+  font-family: "San Francisco Bold";
+  margin-top: 3vw;
+}
+
+.recommended-bet {
+  background-color: #4cb8ed;
+  color: #fff;
+  padding: 0.25vw;
+  border-radius: 0.25vw;
+  margin: 0.25vw;
+  border: 2px solid #1a4b6d;
+}
+
+.bets table {
+  width: 25rem;
+  border-collapse: collapse;
+  margin-top: 0.25vw;
+  overflow: hidden;
+  border-radius: 0.25vw;
+  box-shadow: 0 0.25vw 0.5vw rgba(0, 0, 0, 0.1);
+  font-family: "San Francisco";
+}
+
+.bets th,
+.bets td {
+  border: 1px solid #ddd;
+  padding: 0.25vw;
+  text-align: left;
+}
+
+.bets th {
+  background-color: #4cb8ed;
+  color: #fff;
+  font-family: "San Francisco";
+}
+
+/* Even and Odd Row Styles */
+.bets tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bets tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Recommended Bet Row Styles */
+.bets tbody tr.recommended-bet-row {
+  font-family: "San Francisco";
+  color: #000;
+  border: 2px solid #1a4b6d;
+  border-radius: 0.25vw;
+}
+
+/* Hover Effect */
+.bets tbody tr:hover {
+  background-color: #e6f7ff;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .nba-game-card {
+    width: 90vw; /* Adjusted width for single column layout on mobile */
+    margin: 1vw; /* Adjusted margin for spacing between cards */
+    margin-bottom: 3vw; /* Adjusted margin for spacing between cards */
+  }
+
+  .dashboard-container {
+    max-width: 95vw; /* Adjusted max-width for better fit on mobile */
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items in column layout */
+    margin-top: 1vw; /* Adjusted margin for spacing between cards */
+  }
+
+  .vs {
+    font-size: 3vw;
+    margin-top: 7vw;
+  }
+
+  .team-info {
+    font-size: 2vw;
+  }
+  
+  .team-info p {
+    font-size: 3vw;
+  }
+
+  .team-logo {
+    width: 15vw;
+    aspect-ratio: 1 / 1;
+    margin: 1vw;
+    border-radius: 1vw;
+  }
+}

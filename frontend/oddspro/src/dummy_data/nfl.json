@@ -1,0 +1,59 @@
+{
+    "NFL": {
+      "games": [
+        {
+          "homeTeam": "New England Patriots",
+          "awayTeam": "Kansas City Chiefs",
+          "date": "2023-12-03T20:00:00Z",
+          "platforms": [
+            {
+              "name": "DraftKings",
+              "moneyLine": {
+                "home": -130,
+                "away": 120
+              },
+              "odds": {
+                "home": 1.77,
+                "away": 2.20
+              },
+              "recommendedBet": {
+                "description": "Bet on Kansas City Chiefs to cover the spread",
+                "details": {
+                  "combinedAvgPoints": 53.5,
+                  "bettingPlatform": "PointsBet (US)",
+                  "betType": "spread",
+                  "teams": "New England Patriots vs. Kansas City Chiefs",
+                  "selection": "Kansas City Chiefs +3",
+                  "odds": -110
+                }
+              }
+            },
+            {
+              "name": "Bet365",
+              "moneyLine": {
+                "home": -110,
+                "away": 105
+              },
+              "odds": {
+                "home": 1.91,
+                "away": 2.05
+              },
+              "recommendedBet": {
+                "description": "Bet on Over 53.5 total points",
+                "details": {
+                  "combinedAvgPoints": 53.5,
+                  "bettingPlatform": "PointsBet (US)",
+                  "betType": "totals",
+                  "teams": "New England Patriots vs. Kansas City Chiefs",
+                  "selection": "Over",
+                  "line": 53.5,
+                  "odds": -110
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
