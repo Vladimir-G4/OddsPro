@@ -1,6 +1,7 @@
-# OddsPro
 
-![MLB Logo](https://www.mlbstatic.com/team-logos/league-on-dark/1.svg)
+<div align="center">
+  <img src="https://github.com/Vladimir-G4/OddsPro/assets/17418847/7a9f12fb-4f99-432f-9096-d5f5f29ab56b" alt="OddsPro Logo">
+</div>
 
 ## Overview
 
