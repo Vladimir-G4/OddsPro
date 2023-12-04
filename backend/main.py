@@ -12,7 +12,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
-API_KEY = "1740bebe7f8c01e1e89151edf8d4a4bd"
+API_KEY = "YOUR_API_KEY"
 
 def getMLBBets(API_KEY: str) -> dict:
 
