@@ -1,0 +1,104 @@
+{
+  "games": [
+    {
+      "homeTeam": {
+        "name": "Los Angeles Lakers",
+        "abbreviation": "LAL",
+        "record": "25-10",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/la_lakers.png"
+      },
+      "awayTeam": {
+        "name": "Brooklyn Nets",
+        "abbreviation": "BKN",
+        "record": "20-15",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/brooklyn.png"
+      },
+      "bets": [
+        {"sportsbook": "PointsBet", "bet": "Over", "betType": "Total Points", "points": 230.5, "odds": -110, "highlight": true},
+        {"sportsbook": "DraftKings", "bet": "Over", "points": 230.5, "odds": -105, "highlight": false},
+        {"sportsbook": "Bet365", "bet": "Over", "points": 231.0, "odds": -120, "highlight": false},
+        {"sportsbook": "FanDuel", "bet": "Under", "points": 230.5, "odds": -115, "highlight": false}
+      ]
+    },
+    {
+      "homeTeam": {
+        "name": "Golden State Warriors",
+        "abbreviation": "GSW",
+        "record": "22-13",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/golden_state.png"
+      },
+      "awayTeam": {
+        "name": "Phoenix Suns",
+        "abbreviation": "PHX",
+        "record": "18-18",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/phoenix.png"
+      },
+      "bets": [
+        {"sportsbook": "DraftKings", "bet": "Under", "points": 225.5, "odds": -110, "highlight": true},
+        {"sportsbook": "Bet365", "bet": "Over", "points": 225.5, "odds": -115, "highlight": false},
+        {"sportsbook": "PointsBet", "bet": "Under", "points": 225.0, "odds": -120, "highlight": false},
+        {"sportsbook": "FanDuel", "bet": "Over", "points": 226.0, "odds": -105, "highlight": false}
+      ]
+    },
+    {
+      "homeTeam": {
+        "name": "Milwaukee Bucks",
+        "abbreviation": "MIL",
+        "record": "23-12",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/milwaukee.png"
+      },
+      "awayTeam": {
+        "name": "Philadelphia 76ers",
+        "abbreviation": "PHI",
+        "record": "19-17",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/philadelphia.png"
+      },
+      "bets": [
+        {"sportsbook": "PointsBet", "bet": "Over", "points": 220.5, "odds": -110, "highlight": true},
+        {"sportsbook": "Bet365", "bet": "Under", "points": 220.5, "odds": -105, "highlight": false},
+        {"sportsbook": "DraftKings", "bet": "Under", "points": 220.0, "odds": -120, "highlight": false},
+        {"sportsbook": "FanDuel", "bet": "Over", "points": 221.0, "odds": -115, "highlight": false}
+      ]
+    },
+    {
+      "homeTeam": {
+        "name": "Miami Heat",
+        "abbreviation": "MIA",
+        "record": "20-15",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/miami.png"
+      },
+      "awayTeam": {
+        "name": "Dallas Mavericks",
+        "abbreviation": "DAL",
+        "record": "18-18",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/dallas.png"
+      },
+      "bets": [
+        {"sportsbook": "DraftKings", "bet": "Over", "points": 215.5, "odds": -110, "highlight": true},
+        {"sportsbook": "Bet365", "bet": "Under", "points": 215.5, "odds": -105, "highlight": false},
+        {"sportsbook": "PointsBet", "bet": "Under", "points": 215.0, "odds": -120, "highlight": false},
+        {"sportsbook": "FanDuel", "bet": "Over", "points": 216.0, "odds": -115, "highlight": false}
+      ]
+    },
+    {
+      "homeTeam": {
+        "name": "Boston Celtics",
+        "abbreviation": "BOS",
+        "record": "21-14",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/boston.png"
+      },
+      "awayTeam": {
+        "name": "Toronto Raptors",
+        "abbreviation": "TOR",
+        "record": "16-19",
+        "logoURL": "https://raw.githubusercontent.com/timaboderin/NBA_Logos/master/toronto.png"
+      },
+      "bets": [
+        {"sportsbook": "PointsBet", "bet": "Under", "points": 218.5, "odds": -110, "highlight": true},
+        {"sportsbook": "DraftKings", "bet": "Under", "points": 218.5, "odds": -105, "highlight": false},
+        {"sportsbook": "Bet365", "bet": "Over", "points": 219.0, "odds": -120, "highlight": false},
+        {"sportsbook": "FanDuel", "bet": "Under", "points": 218.0, "odds": -115, "highlight": false}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+/* Footer.css */
+
+.OddsPro-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: auto; /* Push the footer to the bottom of the viewport */
+  padding: 1em;
+}
+
+/* GitHub icon styles */
+.GitHub-icon {
+  width: 2.5em;
+}
+
+/* Additional styling for copyright text */
+.copyright {
+  font-family: "San Francisco";
+  font-size: 0.9em;
+}

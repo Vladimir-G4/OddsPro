@@ -1,0 +1,25 @@
+{
+  "short_name": "OddsPro",
+  "name": "OddsPro: The Ultimate Sports Betting Companion",
+  "icons": [
+    {
+      "src": "oddspro.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg"
+    },
+    {
+      "src": "oddspro.svg",
+      "type": "image/svg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "oddspro.svg",
+      "type": "image/svg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
